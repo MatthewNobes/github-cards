@@ -4,6 +4,14 @@ This project was created as part of my React learning from a course on Pluralsig
 
 My plan is to upgrade the code built in the course so I can demonstrate my React refactoring skills. I also plan to add error handling and jest testing.
 
+## Class Component Branch 
+
+This branch plays host to the class component version of GitHub cards, used mainly as a reference for how this method of React works. 
+
+## Master branch
+
+This branch will be converted to use function components instead, as this is the more modern form of React and refactoring it will be good practice. 
+
 ## Available Scripts
 
 In the project directory, you can run:
