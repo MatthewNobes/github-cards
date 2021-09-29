@@ -4,10 +4,7 @@ import './App.css';
 
 
 class CardList extends React.Component{
-  
-
   render() {
-
     return(
       /**This takes an array of objects (people and their data) and maps out the data into a new 
      * array called profile. This is then used to fill Card components with the profile data
