@@ -1,32 +1,13 @@
 import React from "react";
-import Form from "./features/Form";
+import CardsPage from "./features/CardsPage";
 import "./App.css";
-import CardList from "./features/CardList";
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-
-    this.state = {
-      profiles: [],
-    };
-  }
-
-  addNewProfile = (profileData) => {
-    this.setState((prevState) => ({
-      profiles: [...prevState.profiles, profileData],
-    }));
-  };
-
-  render() {
-    return (
-      <div>
-        <div className="header">{this.props.title}</div>
-        <Form onSubmit={this.addNewProfile} />
-        <CardList profiles={this.state.profiles} />
-      </div>
-    );
-  }
-}
+const App = () => {
+  return (
+    <div className="App">
+      <CardsPage title="GitHub Cards App" />
+    </div>
+  );
+};
 
 export default App;
