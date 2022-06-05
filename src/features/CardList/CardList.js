@@ -1,9 +1,12 @@
 import Card from "./Card";
 
-export const CardList = (props) => (
-  <div>
-    {props.profiles.map((profile) => (
-      <Card profile={profile} />
-    ))}
-  </div>
-);
+export const CardList = (props) => {
+  const profiles = props.profiles;
+  return (
+    <div>
+      {profiles.map((profile) => (
+        <Card profile={profile} />
+      ))}
+    </div>
+  );
+};

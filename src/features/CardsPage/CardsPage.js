@@ -1,29 +1,21 @@
 import React from "react";
+import { useState } from "react";
 import Form from "../Form";
 import CardList from "../CardList";
 
-export class CardsPage extends React.Component {
-  constructor(props) {
-    super(props);
+export const CardsPage = (props) => {
+  const title = props.title;
+  const [profiles, setProfiles] = useState([]);
 
-    this.state = {
-      profiles: [],
-    };
-  }
-
-  addNewProfile = (profileData) => {
-    this.setState((prevState) => ({
-      profiles: [...prevState.profiles, profileData],
-    }));
+  const addNewProfile = (profileData) => {
+    setProfiles((profiles) => [...profiles, profileData]);
   };
 
-  render() {
-    return (
-      <div>
-        <div className="header">{this.props.title}</div>
-        <Form onSubmit={this.addNewProfile} />
-        <CardList profiles={this.state.profiles} />
-      </div>
-    );
-  }
-}
+  return (
+    <div>
+      <div className="header">{title}</div>
+      <Form onSubmit={addNewProfile} />
+      <CardList profiles={profiles} />
+    </div>
+  );
+};
